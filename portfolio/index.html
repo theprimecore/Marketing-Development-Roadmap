@@ -146,6 +146,16 @@
   }
   footer strong { color: #fff; }
   footer .roles { margin-top: 0.8rem; font-size: 0.82rem; color: #9db8d4; }
+
+  @media print {
+    nav { display: none; }
+    body { background: #fff; }
+    header { padding: 2.5rem 6vw 2rem; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    section { padding: 1.5rem 0 0.5rem; page-break-inside: avoid; }
+    .card, .metric, table, .fact { box-shadow: none; page-break-inside: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .metrics, .grid { page-break-inside: avoid; }
+    footer { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
 </style>
 </head>
 <body>
